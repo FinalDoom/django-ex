@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="{{ LANGUAGE_CODE }}">
+	<head>
+		<meta charset="utf-8" />
+		<meta property="fb:admins" content="684663324">
+		{% if page.blockrobots %}<meta name="robots" content="noindex, nofollow" />{% endif %}
+		<title>{% block title %}{% endblock title %}{% block title-page %}{% endblock title-page %} - Nate Moseley's Site</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="{% block meta-description %}{% trans "Nate Moseley''s simple home page" %}{% endblock meta-description %}{% block meta-description-page %}{% endblock meta-description-page %}" />
+		<meta name="keywords" content="{% block meta-keywords %}Nathaniel Moseley, Nathan Moseley, Nate Moseley, nmoseley, FinalDoom, CSH, personal, Home Page, Simple, Bookmarklets{% endblock meta-keywords %}" />
+		<meta name="author" content="FinalDoom" />
+		{% block meta %}{% endblock meta %}
+		<link rel="pingback" href="/xmlrpc/" />
+		<link rel="shortcut icon" href="{% static "zinnia/theme/img/favicon.ico" %}" />
+		<link rel="home" href="{% url 'zinnia:entry_archive_index' %}" />
+		<link rel="stylesheet" type="text/css" media="screen, projection" href="{% static "zinnia/theme/css/screen.css" %}" />
+		<link rel="stylesheet" type="text/css" media="print" href="{% static "zinnia/theme/css/print.css" %}" />
+		<!--[if lt IE 8]>
+		<link rel="stylesheet" type="text/css" media="screen, projection" href="{% static "ie.css" %}" />
+		<![endif]-->
+		{% block link %}{% endblock link %}
+		{% block script %}{% endblock script %}
+	</head>
+
+	<body>
+		<div id="bodywrap">
+			<div id="wrapper"><!-- For sticky footer -->
+
+				<!-- Begin menu -->
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container">
+						</div>
+					</div>
+				</div>
+				<!-- End menu -->
+
+
+				<!-- Quote thing. Hidden until I figure out where to put it -->
+				<div id="quote" style="display: none;">
+					<blockquote>
+						<p>
+						</p>
+						<small>
+						</small>
+					</blockquote>
+				</div>
+
+				{% if amIDead %}
+				<div class="container">
+					<div class="alert alert-error">
+						<a class="close" data-dismiss="alert">x</a>
+						<h4 class="alert-heading">Read This Please</h4>
+						I am presumed Missing or Dead. Click <a href="{% url AmIMissingOrDead %}">here</a> for my last notes, wishes, and all available information, if you can guess one of the passwords.
+					</div>
+				</div>
+				{% endif %}
+
+				<!-- Begin header -->
+				<header id="header">
+					<h1>{{ page.header }}</h1>
+					{% if subHeader %}
+					<h5>{{ subHeader }}</h5>
+				</header>
+				<!-- End header -->
+
+
+				<!-- Begin content -->
+				<div id="content">
+					{% block content %}{% endblock %}
+				</div>
+				<!-- End content -->
+
+			</div>
+
+			<div id="push"></div><!-- For sticky footer -->
+		</div>
+
+		<!-- Begin footer -->
+		{% block footer %}
+		<div id="footerwrapper">
+			<div id="footer" class="container">
+				<div id="footercontent">
+					<h5>Hosted by <a href="http://csh.rit.edu/">Computer Science House</a></h5>
+					<h6>Copyright &copy; {% now "Y" %}</h6>
+				</div>
+			</div>
+		<!-- End footer -->
+		</div>
+		{% endblock %}
+	</body>
+</html>

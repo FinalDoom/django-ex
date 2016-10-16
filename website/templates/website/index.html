@@ -1,0 +1,27 @@
+{% extends base.html %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block meta-description-page %}Simple Home Page{% endblock %}
+
+{% block meta-keywords-page %}Home Page, Simple, Bookmarklets{% endblock %}
+
+{% block header %}
+	{% with 'The Homepage' as page.header %}
+	{{ block.super }}
+	{% endwith %}
+{% endblock %}
+
+{% block content %}
+<p>
+	This is the homepage of Nathaniel Moseley.
+</p>
+<p>
+	Take some time, look around.
+	There are a handful of pages you can visit here. I'm constantly making improvements, so check back now and then.
+	At some point, I may put up some bookmarklets or other things. There's not a ton of content here, but it is growing in the shadows.
+</p>
+<p>
+	This is an ongoing work in progress, though it changes slowly in my free time. Much of what changes happens in the background, but eventually I should get more content put up.
+</p>
+{% endblock %}
