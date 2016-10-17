@@ -18,7 +18,7 @@ class Menu:
 defaultmenu = [
 	Menu("", "Home"),
 	Menu("links/", "Links"),
-	Menu("static/Resume.pdf", "Résumé"),
+	Menu("../static/Resume.pdf", "Résumé"),
 	Menu("thesis/", "Thesis"),
 	Menu("projects/", "Projects",
 		Menu("projects/scripts", "Scripts"),
