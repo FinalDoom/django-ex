@@ -42,7 +42,7 @@ def handheld(request):
 			'handheld/': Menu("handheld/", "Handheld&nbsp;Links"),
 			'nds/': Menu("nds/", "NDS&nbsp;Links"),
 			'psp/': Menu("psp/", "PSP&nbsp;Links")
-			}.iteritems()
+			}.items()
 			if key == request.path_info
 		]
 	})
