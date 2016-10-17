@@ -1,0 +1,117 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}Nathaniel Moseley's Links{% endblock %}
+
+{% block meta-description-page %}Favorite web page links{% endblock %}
+
+{% block meta-keywords-page %}Link, Comic, Kitten, Blog, Favorite{% endblock %}
+
+{% block header %}
+	{% with header="A Few Favorite Links" subHeader="For Your Enjoyment" %}
+	{{ block.super }}
+	{% endwith %}
+{% endblock %}
+
+{% block content %}
+<section id="social">
+{#	<div class="page-header"><h2>Personal</h2></div>#}
+	<div class="row" style="padding-top: 17px;">
+		<div class="span2">&nbsp;</div>
+		<div class="span1"><a href="http://www.linkedin.com/in/nathanielmoseley"><img src="{% static "img/linkedin_32.png" %}" /></a></div>
+		<div class="span1"><a href="https://www.facebook.com/nate.moseley"><img src="{% static "img/facebook_32.png" %}" /></a></div>
+		<div class="span1"><a href="https://plus.google.com/113158567164772473355"><img src="{% static "img/google_plus_32.png" %}" /></a></div>
+		<div class="span1">&nbsp;</div>
+		<div class="span1"><a href="#"><img src="{% static "img/google_voice_32.png" %}" /></a></div>
+		<div class="span1"><a href="skype:finaldoom4689"><img src="{% static "img/skype_32.png" %}" /></a></div>
+		<div class="span1"><a href="gtalk:chat?jid=FinalDoom@gmail.com"><img src="{% static "img/googletalk_32.png" %}" /></a></div>
+		<div class="span1"><a href="aim:goim?screenname=finaldoom2002"><img src="{% static "img/aim_32.png" %}" /></a></div>
+	</div>
+	<br />
+	<div class="row">
+		<div class="span2">&nbsp;</div>
+		<div class="span1"><a href="http://www.last.fm/user/FinalDoom4689"><img src="{% static "img/lastfm_32.png" %}" /></a></div>
+		<div class="span1"><a href="http://grooveshark.com/#!/finaldoom"><img src="{% static "img/grooveshark_32.png" %}" /></a></div>
+		<div class="span1"><a href="http://www.pandora.com/#!/profile/activity/FinalDoom20022002"><img src="{% static "img/pandora_32.png" %}" /></a></div>
+		<div class="span1">&nbsp;</div>
+		<div class="span1"><a href="http://www.reddit.com/user/FinalDoom/"><img src="{% static "img/reddit_32.png" %}" /></a></div>
+		<div class="span1"><a href="http://www.youtube.com/user/FinalDoom2002"><img src="{% static "img/youtube_32.png" %}" /></a></div>
+		<div class="span1"><a href="https://twitter.com/#!/FinalDoom"><img src="{% static "img/twitter_32.png" %}" /></a></div>
+		<div class="span1"><a href="http://finaldoom.tumblr.com/"><img src="{% static "img/tumblr_32.png" %}" /></a></div>
+{#		<div class="span1"><a href=""><img src="{% static "img/myspace_32.png" %}" /></a></div>#}
+{#		<div class="span1"><a href=""><img src="{% static "img/openid_32.png" %}" /></a></div>#}
+	</div>
+</section>
+{# msnim:chat?contact=FinalDoom20022002@msn.com #}
+{# ymsgr:sendim?FinalDoom_20022002 #}
+
+<section id="useful">
+	<div class="page-header"><h2>Really Useful Pages</h2></div>
+	<div class="row">
+		<div class="span3"><h3><a href="http://make-everything-ok.com/">The Make Everything Okay Button</a></h3><p>The button on this page is seriously magical. I\'d use it more often, but things are usually okay.</p></div>
+	</div>
+</section>
+
+<section id="info">
+	<div class="page-header"><h2>Informational</h2></div>
+	<div class="row">
+		<div class="span3"><h3><a href="http://hginit.com/top/">Hg Init</a></h3><p>Useful introductory tutorial to using mercurial and why to use it if you use subversion or others</p></div>
+		<div class="span3"><h3><a href="http://hgtip.com/tips/">Hg Tips</a></h3><p>Collection of good configuration and usage tips for mercurial</p></div>
+		<div class="span3"><h3><a href=""></a></h3><p></p></div>
+		<div class="span3"><h3><a href=""></a></h3><p></p></div>
+	</div>
+</section>
+
+<section id="utilities"><div class="page-header"><h2>Utilities</h2></div>
+	<div class="row">
+		<div class="span3"><h3><a href="https://www.lucidchart.com/documents/">Lucid Chart</a></h3><p>A great HTML5 tool for building flow charts</p></div>
+		<div class="span3"><h3><a href="http://lesscss.org/">Less CSS</a></h3><p>Use dynamic markup to generate CSS with less typing</p></div>
+		<div class="span3"><h3><a href=""></a></h3><p></p></div>
+		<div class="span3"><h3><a href=""></a></h3><p></p></div>
+	</div>
+
+	<section id="comics"><div class="page-header"><h2>Comics</h2></div><div class="row">
+		<div class="span3"><h3><a href="http://xkcd.com/">xkcd</a></h3><p>Programming and physics and other smart humor.</p></div>
+		<div class="span3"><h3><a href="http://www.explosm.net/comics/">Cyanide and Happiness</a></h3><p>A grotesquely funny favorite.</p></div>
+		<div class="span3"><h3><a href="http://www.asofterworld.com/">A Softer World</a></h3><p>Stories of love and the world told with soft focus.</p></div>
+		<div class="span3"><h3><a href="http://www.picturesforsadchildren.com/">Pictures for Sad Children</a></h3><p>Not just for sad children. Droll looks at the happenstance of unfortunate individuals.</p></div>
+	</div>
+
+	<div class="row">
+		<div class="span3"><h3><a href="http://www.smbc-comics.com/">Saturday Morning Breakfast Cereal</a></h3><p>Quick wit and quick comics in a daily dose of hilarity.</p></div>
+		<div class="span3"><h3><a href="http://romanticallyapocalyptic.com/">Romantically Apocalyptic</a></h3><p>Nearly silent feast of art by Vitaly S Alexius</p></div>
+		<div class="span3"><h3><a href="http://dresdencodak.com/">Dresden Codak</a></h3><p>A view into an intricate world of science and beauty</p></div>
+		<div class="span3"><h3><a href="http://www.threepanelsoul.com/">Three Panel Soul</a></h3><p>A comic, always with three panels, heavy on ink and soul.</p></div>
+	</div>
+
+	<div class="row">
+		<div class="span3"><h3><a href="http://www.qwantz.com/index.php">Dinosaur Comics</a></h3><p>Well read dinosaurs talk about all kinds of things</p></div>
+		<div class="span3"><h3><a href="http://dilbert.com/">Dilbert</a></h3><p>A software designer\'s world</p></div>
+		<div class="span3"><h3><a href="http://www.vgcats.com/">VG Cats</a> and <a href="http://www.vgcats.com/super/">Super Effective</a></h3><p>Video game comics starring cats and the world of Pok&eacute;mon</p></div>
+		<div class="span3"><h3><a href="http://www.snotm.com/">Stuff No One Told Me</a></h3><p>Sketches and comics full of lessons from life</p></div>
+	</div>
+
+	<div class="row">
+		<div class="span3"><h3><a href="http://nedroid.com/">Nedroid</a></h3><p>Reginald and Beartato have fun adventures.</p></div>
+		<div class="span3"><h3><a href="http://oglaf.com/">Oglaf! (NSFW)</a></h3><p>Often dirty, often hilarious.</p></div>
+		<div class="span3"><h3><a href="http://www.overcompensating.com/">Overcompensating</a></h3><p></p></div>
+		<div class="span3"><h3><a href="http://www.chugworth.com/">Chugworth Academy</a></h3><p>A comic I read once upon a time about private school girls.</p></div>
+	</div>
+</section>
+
+<section id="art">
+	<div class="page-header"><h2>Art</h2></div>
+	<div class="row">
+		<div class="span3"><h3><a href="http://randomlylondon.com/">Randomly London</a></h3><p>Pix and cool stuff from around London.</p></div>
+	</div>
+</section>
+
+<section id="other"><div class="page-header"><h2>Other</h2></div>
+	<div class="row">
+		<div class="span3"><h3><a href="http://www.randomkittengenerator.com/">Random Kitten Generator</a></h3><p>Possibly the cutest happysauce on the internet.</p></div>
+		<div class="span3"><h3><a href="http://www.ferryhalim.com/orisinal/">Orisinal</a></h3><p>Strangely unique flash that makes you feel good.</p></div>
+		<div class="span3"><h3><a href="http://www.postsecret.blogspot.com/">PostSecret</a></h3><p>A place to share and read secrets and feel good.</p></div>
+		<div class="span3"><h3><a href="http://wikipedia.org/wiki/Main_Page">Wikipedia</a></h3><p><a href="https://wikimediafoundation.org/wiki/Support_Wikipedia/en"><img border="0" alt="Support Wikipedia" src="http://upload.wikimedia.org/wikipedia/commons/5/56/Fundraising_2009-horizontal-treasure-en.png" /></a></p></div>
+	</div>
+</section>
+{% endblock %}

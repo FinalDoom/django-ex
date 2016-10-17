@@ -39,10 +39,15 @@ def handheld(request):
 		'menu': menu.defaultmenu,
 		'menuhidden': [ value for (key, value) in 
 			{
-			'handheld/': Menu("handheld/", "Handheld Links"),
-			'nds/': Menu("nds/", "NDS Links"),
-			'psp/': Menu("psp/", "PSP Links")
+			'handheld/': Menu("handheld/", "Handheld&nbsp;Links"),
+			'nds/': Menu("nds/", "NDS&nbsp;Links"),
+			'psp/': Menu("psp/", "PSP&nbsp;Links")
 			}.iteritems()
 			if key == request.path_info
 		]
+	})
+
+def links(request):
+	return render(request, 'website/links.html', {
+		'menu': menu.defaultmenu
 	})
