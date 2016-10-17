@@ -37,13 +37,11 @@ def about(request):
 def handheld(request):
 	return render(request, 'website/handheld.html', {
 		'menu': menu.defaultmenu,
-		'menuhidden': [ value for (key, value) in 
-			{
-			'handheld/': Menu("handheld/", "Handheld&nbsp;Links"),
-			'nds/': Menu("nds/", "NDS&nbsp;Links"),
-			'psp/': Menu("psp/", "PSP&nbsp;Links")
-			}.items()
-			if key == request.path_info
+		'menuhidden': [
+			Menu("handheld/", "Handheld&nbsp;Links",
+				Menu("nds/", "NDS&nbsp;Links"),
+				Menu("psp/", "PSP&nbsp;Links")
+			)
 		]
 	})
 
