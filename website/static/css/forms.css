@@ -1,0 +1,17 @@
+/*
+Contact Form by html-form-guide.com
+You can customize all the aspects of the form in this style sheet
+All the style elements use form id selector(notice the #contactme). So, including this
+stylesheet does not affect the other elements at all!
+*/
+
+/* spam_trap: This input is hidden. This is here to trick the spam bots*/
+form .spmhidip
+{
+   display:none;
+   width:10px;
+   height:3px;
+}
+form .required label, form label.required {
+	font-weight: bold !important;
+}

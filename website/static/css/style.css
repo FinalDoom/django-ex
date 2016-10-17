@@ -1,0 +1,115 @@
+#header {
+	border-style: solid;
+	border-width: 0 3px;
+	text-align: center;
+}
+
+#header a:hover {
+	border-style: dashed;
+	border-width: 0 0 1px;
+}
+
+#header h1 {
+	font-size: 25px;
+	text-align: center;
+}
+
+#header h2 {
+	font-size: 12px;
+	font-weight: normal;
+	text-align: center;
+}
+
+#menu {
+	border-style: solid;
+	border-width: 0 3px;
+}
+
+#menu .item {
+	border-style: solid;
+	border-width: 0 3px 0 0;
+	display: table-cell;
+	text-align: center;
+	text-decoration: underline;
+}
+
+#menu a:first-child .item {
+	border-width: 0 3px;
+}
+
+#colorbox {
+	text-align: center;
+}
+
+#colorlist div {
+	border-style: solid;
+	border-width: 0 3px 0 0;
+}
+
+#colorlist a {
+	text-decoration: underline;
+}
+
+#colorlist a:hover {
+	cursor: pointer;
+}
+
+#colortab {
+	cursor: pointer;
+}
+
+#colortab a:hover {
+	cursor: pointer;
+}
+
+#colortab div {
+	border-style: solid;
+	border-width: 0 3px 0 0;
+}
+
+#content, #error {
+	border-style: solid;
+	border-width: 0 3px;
+}
+
+#footer {
+	border-style: solid;
+	border-width: 0 3px;
+	text-align: center;
+}
+
+#footer h4 {
+	font-size: 11px;
+	font-weight: normal;
+}
+
+#footer h5 {
+	font-size: 9px;
+	font-weight: normal;
+}
+
+abbr {
+	border-bottom-style: dashed;
+	border-bottom-width: 1px;
+	text-decoration: none;
+}
+
+dd {
+	list-style: none outside none;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.strikeout {
+	text-decoration: line-through;
+}
+
+.underline {
+	text-decoration: underline;
+}

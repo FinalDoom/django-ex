@@ -1,0 +1,15 @@
+#content {
+	text-align: center;
+}
+
+#box {
+	display: inline-block;
+}
+
+#prev1, #prev2 {
+	margin-right: 5em;
+}
+
+#next1, #next2, #next3 {
+	margin-left: 5em;
+}

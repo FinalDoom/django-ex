@@ -1,0 +1,134 @@
+body * {
+	border-color: #333333;
+	color: #FFFFFF;
+}
+
+body {
+	background-color: #000000;
+}
+
+abbr {
+	border-color: #28FF28;
+}
+
+#error, #error * {
+	background-color: #000A22;
+	color: #E60F4A;
+}
+
+#error a, #error h1, #error h2, #error h3, #error h4, #error h5, #error h6 {
+	color: #960F4A;
+}
+
+#header {
+	background-color: #001033;
+}
+
+#header a, #header a * {
+	text-decoration: underline
+}
+
+#header a:hover, #header a:hover * {
+	color: #DAE1FF;
+}
+
+#header h1 {
+	color: #465FFA;
+}
+
+#header h2 {
+	color: #274AFA;
+}
+
+#menu, #menu * {
+	background-color: #1C0927;
+	color: #71279A;
+}
+
+#menuwrap {
+	background-color: #091227;
+}
+
+#menu .item:hover, #menu .item:hover *, #menu .item.selected, #menu .item.selected * {
+	background-color: #71279A;
+	color: #1C0927;
+}
+
+#colorbox, #colorbox * {
+	color: #28FF28;
+}
+
+#colorlist div, #colortab div {
+	background-color: #000000;
+	color: #000A22;
+}
+
+#colorlist a, #colorlist a * {
+	text-decoration: underline
+}
+
+#colorlist a:hover, #colorlist a:hover * {
+	background: none repeat scroll 0 0 #4C3300;
+	color: #274A9A;
+}
+
+#content, #content * {
+	background-color: #000000;
+	color: #28FF28;
+}
+
+#content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
+	color: #465F9A;
+}
+
+#content a, #content a * {
+	text-decoration: underline
+}
+
+#content a:hover, #content a:hover * {
+	background: none repeat scroll 0 0 #4C3300;
+	color: #274A9A;
+}
+
+#footer, #footer * {
+	background-color: #210033;
+	color: #7C469A;
+}
+
+#footer a, #footer a * {
+	text-decoration: underline
+}
+
+#footer a:hover, #footer a:hover * {
+	color: #71279A;
+}
+
+#colorCorner1, #colorCorner2, #colorCorner3, #headerCorner1, #headerCorner2, #headerCorner3, #menuCorner1, #menuCorner2, #menuCorner3, #errorCorner1, #errorCorner2, #errorCorner3, #contentCorner1, #contentCorner2, #contentCorner3, #footerCorner1, #footerCorner2, #footerCorner3 {
+	background-color: #333333;
+}
+
+#colorCorner4, #colorCorner5, #colorCorner6, #colorCorner7 {
+	background-color: #000000;
+}
+
+#headerCorner4, #headerCorner5, #headerCorner6, #headerCorner7 {
+	background-color: #000000;
+}
+
+#menuCorner4, #menuCorner5, #menuCorner6, #menuCorner7 {
+	background-color: #1C0927;
+}
+
+#errorCorner4, #errorCorner5, #errorCorner6, #errorCorner7 {
+	background-color: #000000;
+}
+
+#contentCorner4, #contentCorner5, #contentCorner6, #contentCorner7 {
+	background-color: #000000;
+}
+
+#footerCorner4, #footerCorner5, #footerCorner6, #footerCorner7 {
+	background-color: #210033;
+}
+
+

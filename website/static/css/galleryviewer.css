@@ -1,0 +1,249 @@
+.hide {
+	display: none;
+}
+
+.maxheight {
+	max-height: 100%;
+}
+
+#content img, #content a {
+	outline: none;
+}
+
+#content {
+	background-color: white;
+	color: white;
+	padding: 1px 0;
+	text-align: center;
+}
+
+#containerbox {
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
+
+#paddingbox {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#imagebox, #linkbox {
+	display: inline;
+	max-width: 100%;
+	width: 100%;
+}
+
+#image, #tmpimage, #loadingimage {
+	border-style: none;
+	max-width: 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	vertical-align: middle;
+}
+
+#image {
+	left: 0;
+	position: relative;
+	top: 0;
+	z-index: 10;
+}
+
+#tmpimage {
+	z-index: -30;
+}
+
+#loadingimage {
+	margin: -33px 0 0 -33px;
+	z-index: 20;
+}
+
+#controls {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 10001;
+}
+
+#info {
+	background-color: #222222;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), color-stop(25%, #222222), to(#161616));
+	background-image: -webkit-linear-gradient(#222222, #222222 25%, #161616);
+	background-image: -moz-linear-gradient(top, #222222, #222222 25%, #161616);
+	background-image: -ms-linear-gradient(#222222, #222222 25%, #161616);
+	background-image: -o-linear-gradient(#222222, #222222 25%, #161616);
+	background-image: linear-gradient(#222222, #222222 25%, #161616);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	filter: alpha(opacity=30);
+	opacity: 0.3;
+	padding: 1px 3px 2px;
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	white-space: nowrap;
+	z-index: 10001;
+}
+
+.btn {
+	background-color: #222222;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), color-stop(25%, #222222), to(#161616));
+	background-image: -webkit-linear-gradient(#222222, #222222 25%, #161616);
+	background-image: -moz-linear-gradient(top, #222222, #222222 25%, #161616);
+	background-image: -ms-linear-gradient(#222222, #222222 25%, #161616);
+	background-image: -o-linear-gradient(#222222, #222222 25%, #161616);
+	background-image: linear-gradient(#222222, #222222 25%, #161616);
+	filter: alpha(opacity=30);
+	opacity: 0.3;
+}
+
+.btn:hover {
+  background-color: #000000;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -ms-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+
+.btn.active, .btn:active {
+  background-image: none;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: #166616;
+  background-color: #096909 \9;
+  color: rgba(0, 0, 0, 0.5);
+  outline: 0;
+}
+
+#favorite {
+	bottom: 1px;
+	left: 1px;
+	padding: 2px;
+	position: absolute;
+	z-index: 10001;
+}
+
+#favorite:hover {
+	cursor: pointer;
+}
+
+#fullscreen {
+	padding: 2px;
+	position: absolute;
+	right: 1px;
+	top: 1px;
+	z-index: 10001;
+}
+
+#fullscreen:hover {
+	cursor: pointer;
+}
+
+#top {
+	padding: 2px;
+	position: absolute;
+	right: 91px;
+	top: 1px;
+	z-index: 10001;
+}
+
+#top:hover {
+	cursor: pointer;
+}
+
+#maximize {
+	padding: 2px;
+	position: absolute;
+	right: 46px;
+	top: 1px;
+	z-index: 10001;
+}
+
+#maximize:hover {
+	cursor: pointer;
+}
+
+#play {
+	padding: 2px;
+	position: absolute;
+	right: 1px;
+	top: 46px;
+	z-index: 10001;
+}
+
+#play:hover {
+	cursor: pointer;
+}
+
+#reverse {
+	padding: 2px;
+	position: absolute;
+	right: 31px;
+	top: 46px;
+	z-index: 10001;
+}
+
+#reverse:hover {
+	cursor: pointer;
+}
+
+#slower {
+	padding: 2px;
+	position: absolute;
+	right: 61px;
+	top: 46px;
+	z-index: 10001;
+}
+
+#slower:hover {
+	cursor: pointer;
+}
+
+#faster {
+	padding: 2px;
+	position: absolute;
+	right: 91px;
+	top: 46px;
+	z-index: 10001;
+}
+
+#faster:hover {
+	cursor: pointer;
+}
+
+#next {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 2px;
+	position: absolute;
+	right: 0px;
+	top: 50%;
+	z-index: 10001;
+}
+
+#next:hover {
+	cursor: pointer;
+}
+
+#previous {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 2px;
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	z-index: 10001;
+}
+
+#previous:hover {
+	cursor: pointer;
+}

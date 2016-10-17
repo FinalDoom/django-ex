@@ -1,0 +1,28 @@
+body {
+	margin: 0;
+	overflow-x: hidden;
+}
+
+#menulistwrap, #otherlistwrap {
+	white-space: inherit;
+}
+
+#menucolor {
+	height: 42px;
+}
+
+.menuitem {
+	line-height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+.globals {
+	width: 100%;
+}
+
+.error {
+	width: 100%;
+}

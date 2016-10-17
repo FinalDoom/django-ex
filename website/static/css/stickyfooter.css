@@ -1,0 +1,15 @@
+html, body {
+	height: 100%;
+	margin-bottom: 0;
+}
+
+#wrapper {
+	height: auto !important;
+	height: 100%;
+	margin-bottom: -68px;
+	min-height: 100%;
+}
+
+#footerwrapper, #push {
+	height: 68px;
+}
