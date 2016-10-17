@@ -1,0 +1,51 @@
+{% extends 'website/base.html' %}
+
+{% block title %}A Bit About Nathaniel Moseley{% endblock %}
+
+{% block meta-description-page %}About Nathaniel Moseley{% endblock %}
+
+{% block meta-keywords-page %}About, Description, Profile, Character, Activities, Tastes{% endblock %}
+
+{% block header %}
+	{% with header="About" subHeader="Just a little info" %}
+	{{ block.super }}
+	{% endwith %}
+{% endblock %}
+
+{% block content %}
+<p>
+	Professionally, I'd probably say my field is Computer Science, but as I'm travelling, my time goes mostly toward photography.
+	I recently finished graduate school at <abbr title="Rochester Institute of Technology">RIT</abbr>.
+   	My Bachelor's and Master's degrees are in Computer Science, and my undergraduate work included minors in Psychology and Japanese Language, plus classes and seminars in a variety of disciplines including photography.
+	It's taken a long time, but my fields of study have given me considerable insight into my self and what I am driven by, among the other knowledge I've gained.
+</p>
+<p>
+	Probably the biggest factor in what I enjoy is that I like making things.
+	This includes variety of activities, such as programming, woodworking and carpentry (specifically furniture making), gardening, cooking, and simply fixing things.
+	Perhaps on a similar note, I also enjoy making a positive impact.
+	I have an easy time getting along with people, and I like to use my background in psychology and human relations to help people with any kind of problem they may be having.
+	I also value time spent improving myself in any way I can.
+</p>
+<p>
+	I have an affinity for languages, both computer and natural, and am reasonably proficient with English, Latin, and Japanese, and I'm working on German.
+	I love to travel and experience things, and I am currently planning and engaging in a wandering trip around Europe and parts of Asia.
+</p>
+<p>
+	Before college, I spent 13 years training and playing classical piano.
+	The creativity that allowed me has been missing for most of my time at college, and it has taken me some time to realize it.
+	Hopefully, I will be able to get back into playing piano sooner than later.
+	Furniture making and writing are two things I'm trying to give more focus, as they offer some creative outlet that is more readily available.
+</p>
+<p>
+	I'm an easy-going and open-minded person and am quite difficult to offend.
+	By heredity, I am shy, so I tend not to talk a lot, except in certain circumstances and when it is needed,
+	but if I am in a position to have a proper conversation with one person or am with people I'm comfortable with, I open up a lot.
+	As someone who doesn't talk a lot, I listen to and observe people frequently and try to learn anything I can.
+</p>
+<script type="text/javascript">
+	$(function () {
+		$("abbr").tooltip();
+	});
+</script>
+{% endblock %}
+

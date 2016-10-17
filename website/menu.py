@@ -1,9 +1,17 @@
 # -*- coding: utf-8 -*-
 
+import os
+from django.utils.safestring import mark_safe
+
+BASE_URL = "/" + os.path.split(os.path.dirname(__file__))[-1] + "/"
+
 class Menu:
 	def __init__(self, url, name, *submenu):
-		self.url = url
-		self.name = name
+		if "://" in url:
+			self.url = url
+		else:
+			self.url = BASE_URL + url
+		self.name = mark_safe(name)
 		if submenu is not None:
 			self.submenu = submenu
 
