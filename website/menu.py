@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 class Menu:
 	def __init__(self, url, name, *submenu):
@@ -9,13 +10,13 @@ class Menu:
 defaultmenu = [
 	Menu("", "Home"),
 	Menu("links/", "Links"),
-	Menu("static/Resume.pdf", "R&eacute;sume&eacute;"),
+	Menu("static/Resume.pdf", "Résumé"),
 	Menu("thesis/", "Thesis"),
 	Menu("projects/", "Projects",
 		Menu("projects/scripts", "Scripts"),
 		Menu("userscripts/", "Userscripts"),
 		),
-	Menu("travel/" "Travel and Photos",
+	Menu("travel/", "Travel and Photos",
 		Menu("http://www.flickr.com/photos/finaldoom/", "Flickr"),
 		Menu("http://finaldoom.tumblr.com/", "Tumblr"),
 		),

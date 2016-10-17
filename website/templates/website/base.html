@@ -20,7 +20,7 @@
 		<link rel="stylesheet" type="text/css" href="{% static "css/normalize.css" %}" />
 		<link rel="stylesheet" type="text/css" href="{% static "css/layout.css" %}" />
 		<link rel="stylesheet" type="text/css" href="{% static "css/stickyfooter.css" %}" />
-		<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}" />
+		<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap/bootstrap.css" %}" />
 		<!--[if lt IE 8]>
 		<link rel="stylesheet" type="text/css" media="screen, projection" href="{% static "ie.css" %}" />
 		<![endif]-->
@@ -45,7 +45,7 @@
 						<div class="container">
 							<ul class="nav">
 								{% for item in menu %}
-								<li class="{% if item.id == active_menu_item %}active {% endif %}{% if item.submenu %}dropdown">
+								<li class="{% if item.url == request.path %}active {% endif %}{% if item.submenu %}dropdown">
 									<a href="{{ item.url }}{# use url here #}" class="dropdown-toggle" data-toggle="dropdown">{{ item.name }}<b class="caret"></b></a>
 									<ul class="dropdown-menu">
 										{% for subitem in item.submenu %}
@@ -60,7 +60,7 @@
 								{% if menuhidden %}
 								<li class="divider-vertical" />
 								{% for item in menuhidden %}
-								<li class="{% if item.id == active_menu_item %}active {% endif %}{% if item.submenu %}dropdown">
+								<li class="{% if item.url == request.path %}active {% endif %}{% if item.submenu %}dropdown">
 									<a href="{{ item.url }}{# use url here #}" class="dropdown-toggle" data-toggle="dropdown">{{ item.name }}<b class="caret"></b></a>
 									<ul class="dropdown-menu">
 										{% for subitem in item.submenu %}
@@ -105,7 +105,7 @@
 				{% block header %}
 				<!-- Begin header -->
 				<header id="header">
-					<h1>{{ page.header }}</h1>
+					<h1>{{ header }}</h1>
 					{% if subHeader %}<h5>{{ subHeader }}</h5>{% endif %}
 				</header>
 				<!-- End header -->
