@@ -18,9 +18,9 @@
 		<link rel="stylesheet" type="text/css" media="print" href="{% static "css/print.css" %}" />
 
 		<link rel="stylesheet" type="text/css" href="{% static "css/normalize.css" %}" />
-		<link rel="stylesheet" type="text/css" href="{% static "css/layout.css" %}" />
-		<link rel="stylesheet" type="text/css" href="{% static "css/stickyfooter.css" %}" />
-		<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap/bootstrap.css" %}" />
+		{#<link rel="stylesheet" type="text/css" href="{% static "css/layout.css" %}" />#}
+		{#<link rel="stylesheet" type="text/css" href="{% static "css/stickyfooter.css" %}" />#}
+		{#<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap/bootstrap.css" %}" />#}
 		<!--[if lt IE 8]>
 		<link rel="stylesheet" type="text/css" media="screen, projection" href="{% static "ie.css" %}" />
 		<![endif]-->
@@ -37,49 +37,32 @@
 	<body>
 		<div id="bodywrap">
 			<div id="wrapper"><!-- For sticky footer -->
-
 				{% block menu %}
 				<!-- Begin menu -->
 				<div class="navbar">
 					<div class="navbar-inner">
 						<div class="container">
-							<ul class="nav">
-								{% for item in menu %}
+							<ul class="nav">{% for item in menu %}
 								<li class="{% if item.url == request.path %}active {% endif %}{% if item.submenu %}dropdown">
 									<a href="{{ item.url }}{# use url here #}" class="dropdown-toggle" data-toggle="dropdown">{{ item.name }}<b class="caret"></b></a>
-									<ul class="dropdown-menu">
-										{% for subitem in item.submenu %}
-										<li class="{% if item.id == active_menu_item %}active{% endif %}"><a href="{{ subitem.url }}{# use url here #}">{{ subitem.name }}</a></li>
-										{% endfor %}
-									</ul>
-									{% else %}">
-									<a href="{{ item.url }}">{{ item.name }}</a>{# use url here #}
-									{% endif %}
-								</li>
-								{% endfor %}
-								{% if menuhidden %}
-								<li class="divider-vertical" />
-								{% for item in menuhidden %}
+									<ul class="dropdown-menu">{% for subitem in item.submenu %}
+										<li class="{% if item.id == active_menu_item %}active{% endif %}"><a href="{{ subitem.url }}{# use url here #}">{{ subitem.name }}</a></li>{% endfor %}
+									</ul>{% else %}">
+									<a href="{{ item.url }}">{{ item.name }}</a>{# use url here #}{% endif %}
+								</li>{% endfor %}{% if menuhidden %}
+								<li class="divider-vertical" />{% for item in menuhidden %}
 								<li class="{% if item.url == request.path %}active {% endif %}{% if item.submenu %}dropdown">
 									<a href="{{ item.url }}{# use url here #}" class="dropdown-toggle" data-toggle="dropdown">{{ item.name }}<b class="caret"></b></a>
-									<ul class="dropdown-menu">
-										{% for subitem in item.submenu %}
-										<li class="{% if item.id == active_menu_item %}active{% endif %}"><a href="{{ subitem.url }}{# use url here #}">{{ subitem.name }}</a></li>
-										{% endfor %}
-									</ul>
-									{% else %}">
-									<a href="{{ item.url }}">{{ item.name }}</a>{# use url here #}
-									{% endif %}
-								</li>
-								{% endfor %}{% endif %}
-								{# todo the user menu #}
-							</ul>
+									<ul class="dropdown-menu">{% for subitem in item.submenu %}
+										<li class="{% if item.id == active_menu_item %}active{% endif %}"><a href="{{ subitem.url }}{# use url here #}">{{ subitem.name }}</a></li>{% endfor %}
+									</ul>{% else %}">
+									<a href="{{ item.url }}">{{ item.name }}</a>{# use url here #}{% endif %}
+								</li>{% endfor %}{% endif %}
+								{# todo the user menu #}</ul>
 						</div>
 					</div>
 				</div>
-				<!-- End menu -->
-				{% endblock %}
-
+				<!-- End menu -->{% endblock %}
 				{% block quote %}
 				<!-- Quote thing. Hidden until I figure out where to put it -->
 				<div id="quote" style="display: none;">
@@ -89,41 +72,33 @@
 						<small>
 						</small>
 					</blockquote>
-				</div>
-				{% endblock quote %}
+				</div>{% endblock quote %}{% if amIDead %}
 
-				{% if amIDead %}
 				<div class="container">
 					<div class="alert alert-error">
 						<a class="close" data-dismiss="alert">x</a>
 						<h4 class="alert-heading">Read This Please</h4>
 						I am presumed Missing or Dead. Click <a href="{% url AmIMissingOrDead %}">here</a> for my last notes, wishes, and all available information, if you can guess one of the passwords.
 					</div>
-				</div>
-				{% endif %}
-
+				</div>{% endif %}
 				{% block header %}
 				<!-- Begin header -->
 				<header id="header">
 					<h1>{{ header }}</h1>
 					{% if subHeader %}<h5>{{ subHeader }}</h5>{% endif %}
 				</header>
-				<!-- End header -->
-				{% endblock %}
-
+				<!-- End header -->{% endblock %}
 				<!-- Begin content -->
 				<div id="content">
 					{% block content %}{% endblock %}
 				</div>
 				<!-- End content -->
-
 			</div>
 
 			<div id="push"></div><!-- For sticky footer -->
 		</div>
-
-		<!-- Begin footer -->
 		{% block footer %}
+		<!-- Begin footer -->
 		<div id="footerwrapper">
 			<div id="footer" class="container">
 				<div id="footercontent">
@@ -131,8 +106,8 @@
 					<h6>Copyright &copy; {% now "Y" %}</h6>
 				</div>
 			</div>
-		<!-- End footer -->
 		</div>
+		<!-- End footer -->
 		{% endblock %}
 	</body>
 </html>

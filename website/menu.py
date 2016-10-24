@@ -3,7 +3,7 @@
 import os
 from django.utils.safestring import mark_safe
 
-BASE_URL = "/" + os.path.split(os.path.dirname(__file__))[-1] + "/"
+BASE_URL = "/" #+ os.path.split(os.path.dirname(__file__))[-1] + "/"
 
 class Menu:
 	def __init__(self, url, name, *submenu):
